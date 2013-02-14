@@ -10,10 +10,13 @@ describe('bokkusu', function() {
     });
 
     it('should store something', function(done) {
-        jsonStore(PATH, function() {
+        jsonStore(PATH, function(error) {
+            if (error) throw error;
             var bokkusu = this;
             bokkusu.bulk({'1': 'robert', '2': 'paul'}, function(error) {
-                bokkusu.get('2', function(err, value) {
+                if (error) throw error;
+                bokkusu.get('2', function(error, value) {
+                    if (error) throw error;
                     value.should.eql('paul');
                     done();
                 });
