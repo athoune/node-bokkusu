@@ -1,0 +1,22 @@
+{
+    "name": "bokkusu",
+    "version": "0.0.1",
+    "main": "./lib/bokkusu",
+    "author": "Mathieu Lecarme <mathieu@garambrogne.net>",
+    "description": "Abstract json document storage",
+    "dependencies": {
+        "jsonstore": " >= 0.0.6"
+    },
+    "devDependencies": {
+        "jasmine-node": " >= 1.2.0"
+    },
+
+    "keywords": [],
+    "engines": ["node >= 0.8.0"],
+    "licences": {
+        "type": "MIT"
+    },
+    "scripts": {
+        "test": "./node_modules/jasmine-node/bin/jasmine-node --matchall test"
+    }
+}
