@@ -23,4 +23,20 @@ describe('bokkusu', function() {
             });
         });
     });
+
+    it('should search something', function(done) {
+        jsonStore(PATH, function(error) {
+            if (error) throw error;
+            var bokkusu = this;
+            var data = {
+                'jdoe': {name: 'John', lastname: 'Doe', age: 42}};
+            bokkusu.bulk(data, function(error) {
+                if (error) throw error;
+                bokkusu.search(function() { return this.age > 41; }, function(error) {
+                    if (error) throw error;
+                    done();
+                });
+            });
+        });
+    });
 });
