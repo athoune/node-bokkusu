@@ -1,11 +1,11 @@
 {
     "name": "bokkusu",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "main": "./lib/bokkusu",
     "author": "Mathieu Lecarme <mathieu@garambrogne.net>",
     "description": "Abstract json document storage",
     "dependencies": {
-        "jsonstore": " >= 0.0.6"
+        "jsonstore": " >= 0.0.9"
     },
     "devDependencies": {
         "mocha": " >= 1.7.0",
